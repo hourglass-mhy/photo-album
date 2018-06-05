@@ -32,6 +32,7 @@ exports.getAllAlbumName = function (callback) {
     })
 }
 
+//根据相册名称获取所有图片
 exports.getIamgesByAlbumName = function (albumName,callback) {
     fs.readdir('./uploads/' + albumName,(err,files) => {
         var images = [];
@@ -60,5 +61,4 @@ exports.getIamgesByAlbumName = function (albumName,callback) {
             })
         })(0)
     })
-    
 }

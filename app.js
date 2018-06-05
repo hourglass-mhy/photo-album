@@ -18,6 +18,12 @@ app.get('/',router.showIndex);
 //相册页
 app.get('/:albumName',router.showSingleAlbum);
 
+// 上传页面
+app.get('/up/upload',router.showUploadPage)
+
+//处理上传的文件
+app.post('/up/upload',router.handleUpload)
+
 // 404页面
 app.use(router.showErrorPage404)
 
